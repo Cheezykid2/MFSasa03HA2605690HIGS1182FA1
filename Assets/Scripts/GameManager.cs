@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void GameOver(void v)
+    public void GameOver()
     {
         currentstate = GameState.GameOver;
         // Show game over UI or restart the game
