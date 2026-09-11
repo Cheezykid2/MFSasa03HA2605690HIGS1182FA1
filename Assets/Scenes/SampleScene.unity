@@ -198,9 +198,9 @@ RectTransform:
   - {fileID: 2005941489}
   m_Father: {fileID: 2131032842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -960, y: 540}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308076387
@@ -246,7 +246,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 308076388}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 46988457}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &308076388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2011933912}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 15, z: -20}
 --- !u!1 &393649694
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,8 +489,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393649694}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.514422, y: -0.79620326, z: -1.9570717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -921,7 +933,7 @@ Transform:
   m_GameObject: {fileID: 1555599184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.514422, y: -0.79620326, z: -1.9570717}
+  m_LocalPosition: {x: 2.55, y: -0.86, z: -1.9570717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1204,7 +1216,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 10
   m_CollisionDetection: 1
 --- !u!136 &2011933909
 CapsuleCollider:
@@ -1221,7 +1233,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1411,11 +1423,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4102983663925329181, guid: a03b46d0334f8c145ab5707867996548, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.514422
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4102983663925329181, guid: a03b46d0334f8c145ab5707867996548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79620326
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4102983663925329181, guid: a03b46d0334f8c145ab5707867996548, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1526,7 +1538,7 @@ SceneRoots:
   - {fileID: 1243034385}
   - {fileID: 46988456}
   - {fileID: 2011933912}
-  - {fileID: 393649696}
   - {fileID: 1555599186}
   - {fileID: 5635273685836673874}
   - {fileID: 2270531604633015119}
+  - {fileID: 393649696}

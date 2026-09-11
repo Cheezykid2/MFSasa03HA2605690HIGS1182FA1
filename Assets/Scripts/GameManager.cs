@@ -28,11 +28,17 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void GameOver()
+    public void GameOver(void v)
     {
         currentstate = GameState.GameOver;
         // Show game over UI or restart the game
         Debug.Log("Game Over! Final Score: " + score);
+
+        // Show Game Over UI
+        scoreText.text = "Final Score: " + score;
+        // Enable GameOverText and RestartButton
+        GameObject.Find("GameOverText").SetActive(true);
+
     }
 
     public void RestartGame()
@@ -50,4 +56,7 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Score:" + score;
     }
+
+   
+
 }
